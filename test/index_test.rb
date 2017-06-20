@@ -138,6 +138,7 @@ class IndexTest < Minitest::Test
     store [{name: "Product A", text: large_value}], Region
     assert_search "product", ["Product A"], {}, Region
     assert_search "hello", ["Product A"], {fields: [:name, :text]}, Region
+    # TODO add fields for ES 6
     assert_search "hello", ["Product A"], {}, Region
   end
 

@@ -27,7 +27,7 @@ module Searchkick
           end
 
         index_true_value = below60 ? "analyzed" : true
-        index_false_value = below60 ? "not_analyzed" : false
+        index_false_value = below60 ? "no" : false
 
         keyword_mapping[:ignore_above] = (options[:ignore_above] || 30000) unless below22
 
